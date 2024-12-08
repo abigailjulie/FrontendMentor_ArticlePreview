@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(236, 242, 248);
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.drawersImg {
+  display: block;
+  max-width: 22rem;
+  min-height: 326px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 1rem 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 30rem;
+  height: 100%;
+  position: relative;
+}
+
+.hero {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(85, 85, 85);
+  margin-top: 1rem;
+}
+
+.profileID {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.profileIdStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: row; /* Always keep profileInfo in a horizontal layout */
+  align-items: center; /* Ensure items are aligned in a row */
+  gap: 1rem; /* Space out the profile image and text */
+}
+
+.profileName {
+  font-weight: 700;
+  margin: 0;
+}
+
+.profileDate {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  color: rgb(85, 85, 85);
+  font-weight: 400;
+}
+
+.profileImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.shareBtn {
+  border-radius: 50%;
+  padding: 0.7rem;
+  border: none;
+}
+
+/* .shareIconsActive {
+  background-color: rgb(72, 85, 106);
+  border-radius: 0 0 1rem 1rem;
+  display: none;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: display 0.3s ease-in-out;
+} */
+
+.shareIconsActive {
+  background-color: rgb(72, 85, 106);
+  border-radius: 1rem;
+  display: none;
+  justify-content: space-between;
+  padding: 2rem;
+  position: absolute;
+  top: 50%; /* Position it halfway down the card */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  width: 80%; /* Adjust width as needed */
+  z-index: 10; /* Ensure it appears on top */
+}
+
+.shareBtnActive {
+  background-color: rgb(109, 127, 151);
+  border-radius: 50%;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.share {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.shareIconsActive picture {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shareIconsActive button {
+  border: none;
+  background-color: rgb(72, 85, 106);
+}
+
+.shareBtnActive svg {
+  background-color: rgb(109, 127, 151);
+  border-radius: 50%;
+  border: none;
+}
+
+.card.active {
+  border-radius: 0;
+}
+
+.profileID.hidden {
+  display: none;
+}
+
+/* Hover States */
+button {
+  cursor: pointer;
+}
+
+.shareBtn:hover {
+  cursor: pointer;
+  background-color: rgb(85, 102, 124);
+}
+
+.shareIconsActive button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 376px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drawersImg {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .card {
+    border-radius: 0 1rem 1rem 0;
+    max-width: 30rem;
+    padding: 3rem;
+    min-height: 100%;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .profileID {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    gap: 1rem;
+  }
+
+  .profileIdStack {
+    margin-left: 1rem;
+  }
+
+  .shareIconsActive {
+    display: none;
+  }
+
+  .shareIconsActive.active {
+    display: flex ;
+    background-color: rgba(72, 85, 106, 0.9);
+    border-radius: 1rem;
+    width: 100px;
+  }
+}
